@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">tracker</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="START">Iniciar</string>
+    <string name="VELOCITY">Velocidad Promedio</string>
+    <string name="PRECISION">Precision</string>
+    <string name="HORA">Hora GPS</string>
+    <string name="VELOCIDADMAXIMA">Velocidad Maxima</string>
+    <string name="GENERA">Genera KML</string>
+
+</resources>
