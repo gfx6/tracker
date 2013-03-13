@@ -120,8 +120,7 @@ public class MainActivity extends Activity {
 						velMax=location.getSpeed();
 						txtvelmax.setText(Float.toString(velMax));
 					}
-				}
-				//txtVel.setText(Float.toString(location.getSpeed()));						
+				}									
 				txthora.setText( DateFormat.format("MM/dd/yy h:mmaa",location.getTime()));
 				txtpres.setText(Float.toString(location.getAccuracy()));
 				dp.dismiss();
