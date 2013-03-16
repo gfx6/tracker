@@ -8,6 +8,8 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.google.android.maps.MapActivity;
+
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -24,7 +26,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-public class MainActivity extends Activity {
+public class MainActivity extends MapActivity {
 
 	LocationManager lmanager;
 	LocationListener locListener;
@@ -182,6 +184,11 @@ public class MainActivity extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_main, menu);
+		return true;
+	}
+	@Override
+	protected boolean isRouteDisplayed() {
+		// TODO Auto-generated method stub
 		return true;
 	}
 
