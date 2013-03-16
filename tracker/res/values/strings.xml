@@ -10,5 +10,7 @@
     <string name="HORA">Hora GPS</string>
     <string name="VELOCIDADMAXIMA">Velocidad Maxima</string>
     <string name="GENERA">Genera KML</string>
+    <string name="ACTIVO">Activo</string>
+    <string name="PAUSAR">Pausado</string>
 
 </resources>

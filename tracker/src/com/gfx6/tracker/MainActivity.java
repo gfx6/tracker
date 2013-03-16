@@ -22,6 +22,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends Activity {
 
@@ -33,6 +34,7 @@ public class MainActivity extends Activity {
 	LinkedList<Posicion> posiciones= new LinkedList<Posicion>();
 	ProgressDialog dp;
 	Button btnStart,btnGen;
+	ToggleButton btnPausa; 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -46,6 +48,7 @@ public class MainActivity extends Activity {
 		btnStart.setOnClickListener(listener);
 		btnGen=(Button)findViewById(R.id.btnGuarda);
 		btnGen.setOnClickListener(listenerGen);
+		btnPausa=(ToggleButton) findViewById(R.id.btnPausar);
 		dp= new ProgressDialog(this);
 	}
 	private OnClickListener listenerGen=new OnClickListener()
@@ -99,6 +102,8 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onLocationChanged(Location location) {
+				if (btnPausa.isChecked())
+				{
 				Posicion posAux=new Posicion();
 				posAux.setLatitud(location.getLatitude());
 				posAux.setLongitud(location.getLongitude());
@@ -124,6 +129,7 @@ public class MainActivity extends Activity {
 				txthora.setText( DateFormat.format("MM/dd/yy h:mmaa",location.getTime()));
 				txtpres.setText(Float.toString(location.getAccuracy()));
 				dp.dismiss();
+				}
 			}
 
 			@Override

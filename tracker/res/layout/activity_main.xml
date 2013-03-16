@@ -18,10 +18,11 @@
         android:text="@string/START" />
 
     <ToggleButton
-        android:id="@+id/toggleButton1"
+        android:id="@+id/btnPausar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ToggleButton" />
+        android:textOn="@string/ACTIVO"
+        android:textOff="@string/PAUSAR"/>
 
     <TextView
         android:id="@+id/lblVelocidadMaxima"
